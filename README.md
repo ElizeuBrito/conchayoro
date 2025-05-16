@@ -4,4 +4,4 @@ Full stack app for tech learning.
 
 Welcome to our home page!!
 
-**NEW VERSION RELEASED**
+**NEW VERSION 1.0 RELEASED**
