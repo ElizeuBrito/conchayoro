@@ -67,3 +67,4 @@ jobs:
           sed -i='' "s/<TAG>/$TAG/" Dockerrun.aws.json
       - run: pip install awsebcli --upgrade --user
       - run: eb deploy --verbose
+      
