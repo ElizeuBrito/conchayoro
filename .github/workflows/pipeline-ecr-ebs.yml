@@ -17,8 +17,7 @@ env:
   MODULE_FULLNAME: ${{ vars.PROJECT_NAME }}/${{ vars.MODULE_NAME }}
   REGISTRY_URL: ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ vars.AWS_REGION }}.amazonaws.com
   
-jobs:
-                
+jobs:             
   build:
     runs-on: ubuntu-latest    
     steps:
@@ -41,16 +40,15 @@ jobs:
         path: |
            frontend/.elasticbeanstalk/config.yml
            frontend/Dockerrun.aws.json
-
   tests:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-    - uses: actions/setup-node@v4
-    with:
-      node-version: 18
-    - run: npm --prefix backend install
-    - run: npm --prefix backend test -- --testPathIgnorePatterns=backend/src/products/products.service.spec.ts
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+      - run: npm --prefix backend install 
+      - run: npm --prefix backend test -- --testPathIgnorePatterns=backend/src/products/products.service.spec.ts
     
   deploy:
     runs-on: ubuntu-latest
