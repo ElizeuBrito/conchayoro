@@ -3,11 +3,11 @@ variable "AWS_REGION" {
 }
 
 variable "PROJECT_NAME" { 
-  type    = string 
+  default = "conchayoro" 
 }
 
 variable "MODULE_NAME" { 
-  type    = string 
+  default = "frontend" 
 }
 
 variable "SOLUTION_STACK_NAME" { 
