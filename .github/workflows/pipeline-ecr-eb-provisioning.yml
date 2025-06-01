@@ -38,3 +38,4 @@ jobs:
      - run: | 
             terraform -chdir=$TF_VAR_WORKING_DIR apply \ 
             -auto-approve $TF_VAR_PLAN_FILE
+            

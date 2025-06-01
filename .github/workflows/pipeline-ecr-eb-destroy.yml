@@ -33,3 +33,4 @@ jobs:
            -backend-config="bucket=$BUCKET_S3" \ 
            -backend-config="key=$TF_VAR_STATE_FILE" 
     - run: terraform -chdir=$TF_VAR_WORKING_DIR destroy -auto-approve
+    
