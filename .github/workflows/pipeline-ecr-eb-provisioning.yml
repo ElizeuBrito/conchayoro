@@ -30,4 +30,5 @@ jobs:
      - uses: hashicorp/setup-terraform@v3 
      - run: terraform -chdir=$TF_VAR_WORKING_DIR init -backend-config="bucket=$BUCKET_S3" -backend-config="key=$TF_VAR_STATE_FILE" 
      - run: terraform -chdir=$TF_VAR_WORKING_DIR plan -input=false -out=$TF_VAR_PLAN_FILE 
-     - run: terraform -chdir=$TF_VAR_WORKING_DIR apply -auto-approve $TF_VAR_PLAN_FILE 
+     - run: terraform -chdir=$TF_VAR_WORKING_DIR apply -auto-approve $TF_VAR_PLAN_FILE
+     
